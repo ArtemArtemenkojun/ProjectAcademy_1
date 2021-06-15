@@ -1,16 +1,37 @@
-.header .wrapper-top {
-    background: #20242D;
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonds/gilroy-bold.ttf);
+    font-weight: 700;
 }
 
-.header .address{
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonds/gilroy-semibold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonds/gilroy-regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Gilroy';
+}
+
+.header .wrapper-top {
+    background: #20242d;
+}
+
+.header .address {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0em;
     text-align: left;
-    color: #FFFFFF;
-    ;
+    color: #ffffff;
 }
 
 .header .contacts a {
@@ -20,12 +41,12 @@
     line-height: 14px;
     letter-spacing: 0em;
     text-align: left;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .header .wrapper-bottom {
-    background: #FFFFFF;
+    background: #ffffff;
 }
 
 .header .navigation a {
@@ -35,12 +56,12 @@
     line-height: 17px;
     letter-spacing: 0em;
     text-align: left;
-    color: #20242D;
+    color: #20242d;
     text-decoration: none;
 }
 
 .header .navigation .active {
-    color: #FF7129;
+    color: #ff7129;
 }
 
 .start-screen {
@@ -48,14 +69,14 @@
     background: #777;
 }
 
-.start-screen .main-title{
+.start-screen .main-title {
     font-size: 92px;
     font-style: normal;
     font-weight: 700;
     line-height: 111px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .start-screen .slogan {
@@ -65,21 +86,234 @@
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .start-screen .btn {
-    background: #FF7129;
-    box-shadow: 0px 4px 28px 0px #FF71294A;
+    background: #ff7129;
+    box-shadow: 0px 4px 28px 0px #ff71294a;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 17px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .start-screen .btn-scroll {
     background: rgba(123, 126, 133, 0.4);
+}
+
+.main-info .main-info-title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.main-info .main-info-content p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.footer .wrraper-top {
+    background: #20242d;
+}
+
+.footer .navigation a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer .navigation .active {
+    color: #ff7129;
+}
+
+.footer .btn-dark {
+    background: #20242d;
+    border: 1px solid rgba(255, 113, 41, 1);
+    box-shadow: 0px 4px 28px 0px rgba(255, 113, 41, 0, 67);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer .wrraper-navigation {
+    background: #20242d;
+}
+
+.footer .privace {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #7b7e85;
+}
+
+.footer .secur-data {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #7b7e85;
+}
+
+.start-screen-about h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.start-screen-about {
+    /* For testing */
+    background: #777;
+}
+
+.start-screen-about p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.our-location h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.our-location p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7b7e85;
+}
+
+.our-location a {
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.start-screen-instalacja {
+    /* For testing */
+    background: #777;
+}
+
+.start-screen-instalacja h1 {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.instalation-content h2 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.instalation-content p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.instalation-content .list-instalacja a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+    text-decoration: none;
+}
+
+.instalation-content .list-instalacja li {
+    background: rgba(242, 242, 242, 1);
+}
+
+.instalation-content .content-article-3 .dark-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+}
+
+.instalation-content .content-article-3 .info {
+    background: #f5f5f5;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.instalation-content .content-article-7 {
+    background: #f2f2f2;
 }
