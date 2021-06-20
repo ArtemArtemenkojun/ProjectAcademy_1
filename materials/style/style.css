@@ -1,3 +1,4 @@
+/* Подключаем шрифты */
 @font-face {
     font-family: 'Gilroy';
     src: url(../fonds/gilroy-bold.ttf);
@@ -16,12 +17,76 @@
     font-weight: 400;
 }
 
+/*
+    определяем для всего тела документа 
+    одно семейство шрифтов
+*/
 body {
     font-family: 'Gilroy';
+    margin: 0;
+}
+
+/*убираем все отступы по умолчанию во всех кнопках*/
+button {
+    padding: 0;
+    border: 0;
+}
+
+/*убираем все отступы по умолчанию во всех списках*/
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*убираем декорации по умолчанию ссылок*/
+a {
+    text-decoration: none;
+}
+
+/* Стили кнопок */
+.btn {
+    background: #ff7129;
+    box-shadow: 0px 4px 28px 0px #ff71294a;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    padding: 16px 45px;
+}
+
+.btn-dark {
+    background-color: #20242d;
+    border: 1px solid #ff7129;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 28px 0px #ff7129ab;
+}
+
+/*главный контейнер центровщик*/
+.container {
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .header .wrapper-top {
     background: #20242d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .wrapper-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .address {
@@ -34,6 +99,19 @@ body {
     color: #ffffff;
 }
 
+.header .contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .contacts li {
+    margin-right: 56px;
+}
+
+.header .contacts li:last-child {
+    margin-right: 0;
+}
+
 .header .contacts a {
     font-size: 12px;
     font-style: normal;
@@ -42,11 +120,31 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
-    text-decoration: none;
 }
 
 .header .wrapper-bottom {
     background: #ffffff;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.header .wrapper-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navigation ul {
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation li {
+    margin-right: 56px;
+}
+
+.header .navigation li:last-child {
+    margin-right: 0;
 }
 
 .header .navigation a {
@@ -57,7 +155,6 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #20242d;
-    text-decoration: none;
 }
 
 .header .navigation .active {
@@ -65,8 +162,12 @@ body {
 }
 
 .start-screen {
-    /* For testing */
-    background: #777;
+    background-image: url('../images/start-screen-maim-bg.jpg');
+    padding-top: 270px;
+    padding-bottom: 138px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .start-screen .main-title {
@@ -77,6 +178,10 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .start-screen .slogan {
@@ -87,25 +192,45 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #ffffff;
+    max-width: 508px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 59px;
 }
 
 .start-screen .btn {
-    background: #ff7129;
-    box-shadow: 0px 4px 28px 0px #ff71294a;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 106px;
 }
 
 .start-screen .btn-scroll {
     background: rgba(123, 126, 133, 0.4);
+    width: 46px;
+    height: 46px;
+    border-radius: 46%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.main-info .main-info-title {
+.main-info {
+    background: #ffffff;
+    padding-top: 132px;
+    padding-bottom: 115px;
+    background-image: url('../images-PNG/main-content-image-bg.png');
+    background-position: -36px 0;
+    background-size: 1400px 1055px;
+    background-repeat: no-repeat;
+}
+
+.main-info .container {
+    display: flex;
+    padding-left: 163px;
+    padding-right: 150px;
+}
+
+.main-info-title {
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -115,7 +240,21 @@ body {
     color: #20242d;
 }
 
-.main-info .main-info-content p {
+.main-info img {
+    margin-right: 65px;
+}
+
+.main-info-content {
+    width: 535px;
+    padding-top: 69px;
+}
+
+.main-info .title {
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.main-info-content p {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -129,6 +268,37 @@ body {
     background: #20242d;
 }
 
+.footer .wrraper-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 58px;
+    padding-bottom: 52px;
+}
+
+.footer .navigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .navigation li {
+    margin-right: 56px;
+}
+
+.footer .navigation li:last-child {
+    margin-right: 0;
+}
+
+.footer .wrraper-navigation .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid rgba(123, 126, 133, 0.3);
+}
+
 .footer .navigation a {
     font-size: 14px;
     font-style: normal;
@@ -137,24 +307,10 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
-    text-decoration: none;
 }
 
 .footer .navigation .active {
     color: #ff7129;
-}
-
-.footer .btn-dark {
-    background: #20242d;
-    border: 1px solid rgba(255, 113, 41, 1);
-    box-shadow: 0px 4px 28px 0px rgba(255, 113, 41, 0, 67);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #ffffff;
 }
 
 .footer .wrraper-navigation {
@@ -280,7 +436,6 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: #20242d;
-    text-decoration: none;
 }
 
 .instalation-content .list-instalacja li {
