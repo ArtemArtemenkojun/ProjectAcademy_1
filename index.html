@@ -93,15 +93,23 @@
 
         <div class="container">
 
+            <span class="decor-word">
+                Solar
+            </span>
+
             <h1 class="main-title">
                 Panele Fotowoltaiczne
             </h1>
+
+            <span class="decor-word-2">
+                Energy
+            </span>
     
             <p class="slogan">
                 Kompleksowe usługi w zakresie montażu i podłączenia paneli słonecznych.
             </p>
     
-            <button class="btn">
+            <button class="btn btn-pop-up">
                 Obliczyć koszt
             </button>
     
@@ -122,7 +130,11 @@
             <img src="materials/images/main-info-picture.jpg" width="600" height="600" alt="main picture content">
             
             <div class="main-info-content">
-            
+                
+                <span class="decor-word">
+                    Info
+                </span>
+
                 <h2 class="main-info-title">
                     Ty i twói dom
                 </h2>
@@ -213,9 +225,50 @@
     
             </div>
             
+            <div class="pop-up">
+
+                <button class="pop-up-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="#20242D"/>
+                    </svg>
+                </button>
+    
+                <b class="pop-up-title">
+                    Jakieś pytania?
+                </b>
+    
+                <p class="pop-up-dscr">
+                    Zostaw swoje dane, a nasz menedżer skontaktuje się z Tobą, aby odpowiedzieć na Twoje pytania
+                </p>
+    
+                <form method="GET" action="#">
+                    
+                    <label>
+                        Twoje imię
+                        <input type="text" name="user" placeholder="Wprowadź swoje imię" id="name">
+                    </label>
+
+                    <label>
+                        E-mail
+                        <input type="email" name="email" placeholder="Wprowadź mail" id="email">
+                    </label>
+
+                    <label>
+                        Telefon
+                        <input type="tel" name="phone" placeholder="Wprowadź telefon" id="tel">
+                    </label>
+
+                    <button type="submit" class="btn pop-up-btn">Wysłać prośbę</button>
+
+                </form>
+
+            </div>
+
         </div>
 
     </footer>
+
+    <script src="./materials/scripts/script.js"></script>
 
 </body>
 

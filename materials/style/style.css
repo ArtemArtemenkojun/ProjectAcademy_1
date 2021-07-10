@@ -105,7 +105,15 @@ a {
 }
 
 .header .contacts li {
+    position: relative;
     margin-right: 56px;
+    padding-left: 22px;
+}
+
+.header .contacts svg {
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 .header .contacts li:last-child {
@@ -158,16 +166,43 @@ a {
 }
 
 .header .navigation .active {
+    position: relative;
     color: #ff7129;
+}
+
+.header .navigation .active::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #ff7129;
+    top: 8px;
+    left: -15px;
+}
+
+.header .navigation .active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #ff7129;
+    top: 8px;
+    right: -15px;
 }
 
 .start-screen {
     background-image: url('../images/start-screen-maim-bg.jpg');
-    padding-top: 270px;
-    padding-bottom: 138px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.start-screen .container {
+    position: relative;
+    padding-top: 270px;
+    padding-bottom: 138px;
 }
 
 .start-screen .main-title {
@@ -214,6 +249,36 @@ a {
     margin-right: auto;
 }
 
+.start-screen .decor-word {
+    position: absolute;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: transparent;
+    text-transform: uppercase;
+    top: 163px;
+    left: 50px;
+}
+
+.start-screen .decor-word-2 {
+    position: absolute;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: transparent;
+    text-transform: uppercase;
+    bottom: 282px;
+    right: 50px;
+}
+
 .main-info {
     background: #ffffff;
     padding-top: 132px;
@@ -230,7 +295,22 @@ a {
     padding-right: 150px;
 }
 
-.main-info-title {
+.main-info .main-info-content .decor-word {
+    position: absolute;
+    -webkit-text-stroke: 1px rgba(32, 36, 45, 0.1);
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: transparent;
+    text-transform: uppercase;
+    top: 0px;
+    left: -29px;
+}
+
+.main-info .main-info-title {
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -245,13 +325,27 @@ a {
 }
 
 .main-info-content {
+    position: relative;
     width: 535px;
     padding-top: 69px;
 }
 
-.main-info .title {
+.main-info .main-info-title {
+    position: relative;
     margin-top: 0;
     margin-bottom: 64px;
+    padding-left: 16px;
+}
+
+.main-info .main-info-title::before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 52px;
+    width: 1px;
+    background-color: #ff7129;
+    top: 0px;
+    left: 0px;
 }
 
 .main-info-content p {
@@ -337,6 +431,112 @@ a {
     color: #7b7e85;
 }
 
+.pop-up {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding-top: 72px;
+    padding-right: 58px;
+    padding-bottom: 51px;
+    padding-left: 58px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(-50%, -2000px);
+    }
+    50% {
+        transform: translate(-50%, 0%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.pop-up-show {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.pop-up .pop-up-close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background-color: transparent;
+}
+
+.pop-up .pop-up-title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.pop-up .pop-up-dscr {
+    margin-bottom: 56px;
+}
+
+.pop-up form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pop-up form label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7b7e85;
+    margin-bottom: 24px;
+}
+
+.pop-up form input {
+    display: block;
+    border: 1px solid #e0e0e0;
+    padding: 16px 24px;
+    margin-top: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242d;
+    min-width: 327px;
+    box-sizing: border-box;
+}
+
+.pop-up form input::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7b7e85;
+}
+
+.pop-up form .pop-up-btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 28px;
+}
+
 .start-screen-about h1 {
     font-size: 48px;
     font-style: normal;
@@ -347,20 +547,51 @@ a {
     color: #ffffff;
 }
 
+/* нуждается в проверке */
 .start-screen-about {
-    /* For testing */
-    background: #777;
+    background-image: url('../images/about-us-bg-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.start-screen-about p {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #20242d;
+.start-screen-about .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    padding-bottom: 103px;
+    padding-left: 217px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+.start-about-info {
+    background-image: url('../images-PNG/about-us-info-bg.png');
+    background-position: -2px -14px;
+    background-size: 1401px 639px;
+    background-repeat: no-repeat;
+}
+
+.start-about-info .container {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 200px;
+    padding-right: 266px;
+    padding-top: 80px;
+    padding-bottom: 184px;
+}
+
+.start-about-info .container-right {
+    width: 534px;
+    padding-right: 66px;
+}
+
+.start-about-info .container-left {
+    width: 534px;
+    padding-left: 80px;
+}
+
+/* нуждается в проверке */
 
 .our-location h1 {
     font-size: 48px;
